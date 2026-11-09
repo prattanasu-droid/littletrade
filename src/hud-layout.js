@@ -1,0 +1,7 @@
+// Shared HUD geometry: CSS consumes these positions; tests check touch clearance.
+export function hudLayout(width,height){const w=Math.max(280,Math.round(width)),h=Math.max(280,Math.round(height));const landscape=w>h&&h<=500;const phone=w<=650||landscape;if(!phone)return null;
+ if(landscape)return {width:w,height:h,landscape:true,player:{x:12,y:12,w:220,h:60},menu:{x:w-156,y:12,w:144,h:44},quest:{x:12,y:84,w:225,h:56},map:{x:w-116,y:72,w:104,h:70},quick:{x:w-156,y:154,w:144,h:44},ecology:{x:12,y:148,w:210,h:44},joystick:{x:28,y:h-124,w:84,h:84},attack:{x:w-92,y:h-104,w:64,h:64},interact:{x:w-152,y:h-88,w:48,h:48},prompt:{x:w/2-100,y:h-48,w:200,h:36}};
+ return {width:w,height:h,landscape:false,player:{x:12,y:12,w:Math.min(232,w-128),h:60},menu:{x:w-108,y:12,w:96,h:44},quest:{x:12,y:84,w:w-140,h:66},map:{x:w-116,y:84,w:104,h:70},quick:{x:w-156,y:166,w:144,h:44},ecology:{x:12,y:166,w:Math.min(220,w-180),h:44},joystick:{x:24,y:h-156,w:92,h:92},attack:{x:w-92,y:h-132,w:68,h:68},interact:{x:w-156,y:h-116,w:52,h:52},prompt:{x:24,y:h-204,w:w-48,h:36}};
+}
+export function hudVariables(layout,height){const vars={'--game-view-height':`${height}px`};if(!layout)return vars;for(const name of ['player','menu','quest','map','quick','ecology'])for(const [key,value]of Object.entries(layout[name]))vars[`--hud-${name}-${key}`]=`${value}px`;vars['--hud-control-bottom']=layout.landscape?'40px':'64px';return vars;}
+export function intersects(a,b){return a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y;}

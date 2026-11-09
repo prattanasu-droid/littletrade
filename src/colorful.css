@@ -1,0 +1,63 @@
+/* Black text throughout books, dialogs and menu panels. */
+.modal,.modal :is(h1,h2,h3,h4,p,span,strong,small,b,i,label,button,input,select,a,kbd,li,svg),
+.entry-card :is(h1,h2,h3,p,span,strong,small,b,i,label,button,input,select,a,svg),
+.character-screen :is(h1,h2,h3,p,span,strong,small,b,label,button,input,select,a),
+.game-player-hud :is(strong,small,b,span),.game-quest-tracker,.game-quest-tracker :is(span,strong,b,p,i),
+.game-shell .location-tag :is(strong,span){color:#111111!important}
+.modal input::placeholder,.entry-card input::placeholder,.character-screen input::placeholder{color:#444!important;opacity:1}
+.modal button:disabled,.character-screen button:disabled{opacity:1;color:#111!important;background:#eceee6!important;border-color:#d1d8c7!important;box-shadow:none!important;cursor:not-allowed}
+.modal .inventory-item.empty{opacity:1;background:#f2f4ed}.modal .inventory-item.empty>span{opacity:.4}
+.modal-header h2{font-weight:750!important}.modal-header p,.helper-text{font-size:11px!important;line-height:1.95!important}
+.modal .tabs>button{font-weight:550}.modal .tabs>button.active{background:#e1eec9;border-radius:6px 6px 0 0;padding-left:10px;padding-right:10px}
+.modal .journal-quest,.modal .side-quest-list>article{border:1px solid #cdddba;box-shadow:0 3px 0 #d7e5c349;background:linear-gradient(115deg,#fffef6,#f2f8e8)}
+.modal .journal-quest.completed{background:linear-gradient(115deg,#e6f5cc,#f5fbe8);border-color:#bbd69d}
+.modal .learning-journal>article{background:#fffef3;border:1px solid #e8dfb6;border-radius:9px;margin-bottom:12px;box-shadow:0 3px 0 #f1e5b946}
+.modal .learning-journal>article:nth-child(even){background:#f1f5ff;border-color:#dce4f6;box-shadow:0 3px 0 #dbe5f546}
+.modal .journal-number,.modal .side-quest-icon{background:#dcebc5;border-color:#c4d9a4}
+.modal .trade-demand{background:#e9f5d6;border-color:#cddfaf}
+.modal .trade-offer{background:linear-gradient(125deg,#f7f1de,#f5e9da);border:1px solid #ead6af;border-radius:11px;padding:16px 12px}
+.modal .trade-offer>span{font-size:12px!important}.modal .trade-offer small{font-size:10px!important}
+.modal .recipe-card{background:linear-gradient(120deg,#fcfff2,#ecf4da);border-color:#d1e2b4;box-shadow:0 3px 0 #c8dca226}
+.modal .recipe-ingredients>span.enough{background:#dfefc2;border-color:#c4dba0}
+.modal .recipe-ingredients>span:not(.enough){background:#fff0d9;border-color:#ead0a4}
+.modal .market-event{background:linear-gradient(120deg,#fff0bd,#fff7da);border-color:#e5cf87}
+.modal .market-row:nth-child(odd){background:#f1f7e8;border-radius:5px;padding-left:6px;padding-right:6px}
+.modal .quiz-card button.correct{background:#def0b8!important;border-color:#b5d582!important;opacity:1}
+.modal .quiz-explanation{background:#eff7df;border-color:#d6e7bc}
+.modal .quiz-card button.selected{background:#ffebcc;border-color:#e9c593}
+.modal .primary{background:linear-gradient(115deg,#b3d986,#89be78)!important;border-color:#7ea959!important;box-shadow:0 3px 0 #638d4e!important;color:#111!important}
+.modal .primary:hover:not(:disabled){background:linear-gradient(115deg,#c3e39e,#9dcc8c)!important}
+.modal .primary:disabled{background:#e6eadf!important;box-shadow:none!important;border-color:#cdd5c3!important}
+.modal .secondary{background:linear-gradient(115deg,#eef7db,#e2edc9)!important;border-color:#cadcb0!important}
+.modal .secondary:disabled{background:#eceee7!important;border-color:#d5dbcd!important}
+.modal .fullscreen-setting>button{background:linear-gradient(120deg,#e1edff,#d9e3f6);border-color:#c2d1e9}
+.modal .settings-options>button.active{background:#d9edb7;border-color:#b6d78b}
+.modal .account-message{background:#fff2cc;border-color:#e5d196}
+.npc-quest-action{background:linear-gradient(125deg,#fff4c7,#fff9e7);border:1px solid #e2ce8e;border-radius:11px;padding:17px;margin-bottom:23px;box-shadow:0 4px 0 #e7d9a533}
+.npc-quest-eyebrow{display:flex;align-items:center;gap:6px;font-size:10px;font-weight:650;letter-spacing:.2px}
+.npc-quest-action h3{font-size:15px;font-weight:700;line-height:1.8;margin:7px 0 10px}
+.quest-requirements{display:flex;flex-direction:column;gap:9px;margin-bottom:17px}
+.quest-requirements>span{display:flex;align-items:flex-start;gap:8px;font-size:11px;line-height:1.8}
+.quest-requirements i{display:grid;place-items:center;width:18px;height:18px;border-radius:5px;border:1px solid #dfd1aa;background:#fff9e8;font-size:10px;font-style:normal;flex-shrink:0}
+.quest-requirements .requirement-done i{background:#d7eab7;border-color:#b9d691}
+.npc-quest-action .primary{font-size:12px!important;min-height:43px}
+.npc-quest-action p{font-size:11px;line-height:1.9;margin:0 0 15px}
+.npc-quest-action .quest-missing-hint{font-size:10px;margin:11px 0 0}
+.npc-quest-action.quest-finished{background:linear-gradient(125deg,#e3f3c8,#f5fbe9);border-color:#bad69b}
+.quest-turn-in-done{display:flex;align-items:center;gap:8px;font-size:11px;line-height:1.9;margin:0!important}
+.quest-turn-in-done>svg{flex-shrink:0}
+.npc-quest-action.quest-ready{background:linear-gradient(125deg,#e9e4fc,#f7f2ff);border-color:#d2c5ec}
+/* Warm sunlight, colored bounce light and a soft edge shade over the world. */
+.game-shell .world-frame:after{content:'';position:absolute;inset:0;pointer-events:none;z-index:2;background:radial-gradient(ellipse at 12% 7%,#fff6bc21 0,transparent 57%),radial-gradient(ellipse at 96% 95%,#46639118 0,transparent 52%);box-shadow:inset 0 0 110px #24483324}
+.game-shell .phaser-host>canvas{filter:saturate(1.14) brightness(1.025) contrast(1.025)}
+.game-shell .game-player-hud{background:linear-gradient(115deg,#fff9e9f5,#eef8dff2);border-color:#f5e7bc;box-shadow:0 4px 0 #385a3a29,0 10px 28px #193b2e24}
+.game-shell .game-quest-tracker{background:linear-gradient(125deg,#fff6d8f0,#f5f8dcf0);border-color:#e8dba3;box-shadow:0 4px 0 #71834629,0 7px 22px #294b3020}
+.game-shell .game-menu-buttons>button,.game-shell .world-quick-actions>button{background:linear-gradient(125deg,#fff9e8f2,#e4f0c6ed);box-shadow:0 4px 0 #3b66322e,0 5px 14px #21432a1c;color:#263d1c}
+.game-shell .game-mini-map{box-shadow:0 4px 0 #365b3233,0 8px 24px #1b3e2e24;background:#f8f0d8df;border-color:#e8d49b}
+.game-shell .attack-touch{background:radial-gradient(circle at 30% 20%,#ffe9b2ed,#dfa66de0);box-shadow:0 5px 0 #805b334d,0 8px 20px #3f52272b;color:#483519}
+.game-shell .interact-touch{background:radial-gradient(circle at 30% 20%,#efffbaed,#a6cc78e3);box-shadow:0 4px 0 #527a384f;color:#355123}
+.game-shell .joy-knob{background:radial-gradient(circle at 30% 20%,#fcffe3f0,#d4e5a3de);box-shadow:0 4px 0 #5e7a3b38,0 5px 10px #2f532332}
+.game-shell .world-toast{background:#fff9dfed;color:#111;border-color:#e2d194;font-size:11px}
+.entry-card{box-shadow:0 8px 0 #95b47750,0 25px 70px #062a3847}
+.onboarding-editor{box-shadow:0 5px 0 #c2d69b55,0 20px 42px #587d3a14}
+@media(max-width:650px){.npc-quest-action{padding:14px;margin-bottom:20px}.npc-quest-action h3{font-size:14px}.quest-requirements>span{font-size:11px}.modal-header p,.helper-text{font-size:10px!important}.game-shell .world-toast{font-size:10px}.game-shell .world-frame:after{box-shadow:inset 0 0 65px #24483320}}
