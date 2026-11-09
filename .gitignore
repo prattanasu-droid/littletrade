@@ -1,0 +1,14 @@
+node_modules
+dist
+work
+.env
+.env.local
+
+public/setup/little-trade-source.zip
+
+.vercel
+.env.*
+!.env.example
+*.log
+.DS_Store
+public/setup/little-trade-github-vercel.zip
