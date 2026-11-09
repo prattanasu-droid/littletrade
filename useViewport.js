@@ -1,0 +1,2 @@
+import {useEffect,useState} from 'react';
+export function useViewport(){const read=()=>({width:Math.round(window.visualViewport?.width||window.innerWidth),height:Math.round(window.visualViewport?.height||window.innerHeight)});const [viewport,setViewport]=useState(read);useEffect(()=>{const update=()=>setViewport(read());window.addEventListener('resize',update);window.visualViewport?.addEventListener('resize',update);return()=>{window.removeEventListener('resize',update);window.visualViewport?.removeEventListener('resize',update);};},[]);return viewport;}
